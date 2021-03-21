@@ -6,7 +6,7 @@ from selenium import webdriver   #to handle chromium webdriver
 from bs4 import BeautifulSoup as BS4   #for handling xml page
 import lxml #to decode xml page with bs4
 import time #to pause the scrolling 
-import getpass #to handle the dynamic password input (in the case)
+import getpass #to handle the dynamic password input (in the case you follow that path)
 
 #load the chrome webdriver (get the right one from https://chromedriver.chromium.org/downloads)
 browser = webdriver.Chrome("c:\yourpath\chromedriver.exe")
@@ -19,6 +19,8 @@ browser.get("https://www.linkedin.com/login?")
 user = input ("insert username:\n")
 password = getpass.getpass(prompt='Insert password: ', stream=None) 
 '''
+user = "yourusername"
+password = "yourpassword"
 
 #submitting login info (replace "username" & "password" with your real login info)
 userID = browser.find_element_by_id("username")
