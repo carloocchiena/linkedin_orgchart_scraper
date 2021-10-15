@@ -18,10 +18,10 @@ browser.get("https://www.linkedin.com/login?")
 user = input ("insert username:\n")
 password = getpass.getpass(prompt='Insert password: ', stream=None) 
 '''
+#submitting login info (replace "username" & "password" with your real login info)
 user = "yourusername"
 password = "yourpassword"
 
-#submitting login info (replace "username" & "password" with your real login info)
 userID = browser.find_element_by_id("username")
 userID.send_keys(user)
 
