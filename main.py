@@ -4,7 +4,6 @@ Created by Carlo Occhiena on Dec 2020
 
 from selenium import webdriver   #to handle chromium webdriver
 from bs4 import BeautifulSoup as BS4   #for handling xml page
-import lxml #to decode xml page with bs4
 import time #to pause the scrolling 
 import getpass #to handle the dynamic password input (in the case you follow that path)
 
@@ -57,7 +56,7 @@ while True:
     
     #preparing the soup
 search = browser.page_source
-soup = BS4(search, "lxml")
+soup = BS4(search, "html.parser")
 
 #appending results in a dictionary and printing it
 name_list =[]
